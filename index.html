@@ -356,23 +356,26 @@
 
     let accepted = false;
     yesBtn.addEventListener("click", () => {
-      if (accepted) return;
-      accepted = true;
+  if (accepted) return;
+  accepted = true;
 
-      const r = yesBtn.getBoundingClientRect();
-      const x = r.left + r.width / 2;
-      const y = r.top + r.height / 2;
-      burstHearts(x, y);
+  const r = yesBtn.getBoundingClientRect();
+  const x = r.left + r.width / 2;
+  const y = r.top + r.height / 2;
+  burstHearts(x, y);
 
-      card.classList.add("success");
-      title.textContent = "YAYYYYY 💖 See you on Valentine’s 😌";
-      note.textContent = "Best decision ever. (I knew you’d say yes 😈)";
-      yesBtn.textContent = "💘";
+  card.classList.add("success");
+  title.textContent = "YAYYYYY 💖 See you on Valentine’s 😌";
+  note.textContent = "Best decision ever. (I knew you’d say yes 😈)";
+  yesBtn.textContent = "💘";
 
-      // Make No harmless after yes
-      noBtn.disabled = true;
-      noBtn.style.opacity = "0.25";
-      noBtn.style.cursor = "not-allowed";
+  // 👉 SHOW THE GIF
+  document.getElementById("gifContainer").style.display = "block";
+
+  noBtn.disabled = true;
+  noBtn.style.opacity = "0.25";
+  noBtn.style.cursor = "not-allowed";
+
     });
   </script>
 </body>
