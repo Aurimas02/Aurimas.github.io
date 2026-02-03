@@ -177,6 +177,14 @@
       align-items:center;
     }
 
+    .note.side{
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  bottom:auto;
+}
+
+
     /* Heart particles */
     .heart{
       position:fixed;
@@ -375,6 +383,7 @@
   card.classList.add("success");
   title.textContent = "YAYYYYY 💖 See you on Valentine’s 😌";
   note.textContent = "Best decision ever. (I knew you’d say yes 😈)";
+  note.classList.add("side");
   yesBtn.textContent = "💘";
 
   // 👉 SHOW THE GIF
